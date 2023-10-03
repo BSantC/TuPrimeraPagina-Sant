@@ -1,0 +1,21 @@
+{% extends "compartidos/base.html" %}
+{% block head %}
+<title>Busqueda de Libros </title>
+{% endblock head %}
+
+{% block h1_header %} Buscando Libros! {% endblock h1_header %} 
+
+{% block main_content %}
+<form action="" method="get"> 
+    {{formulario}}
+    <input type="submit" value="Buscar" />
+</form>
+
+<ul>
+    {% for libro in  titulos_encontrados %}
+        <li>{{libro}}</li>
+    {% endfor %}
+</ul>
+
+
+{% endblock main_content %}

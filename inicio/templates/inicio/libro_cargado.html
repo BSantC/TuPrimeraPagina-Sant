@@ -1,0 +1,17 @@
+{% extends "compartidos/base.html" %}
+{% block head %}
+<title> Carga de Libros </title>
+{% endblock head %}
+
+{% block h1_header %} Cargando Libros! {% endblock h1_header %} 
+
+{% block main_content %}
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{formulario}}
+    <input type="submit" value="Cargar" />
+
+</form>
+
+{% endblock main_content %}
